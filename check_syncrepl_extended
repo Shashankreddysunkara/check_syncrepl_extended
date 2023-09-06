@@ -31,7 +31,10 @@
 # and without restriction to retrieve objects from servers.
 #
 # Author: Benjamin Renard <brenard@easter-eggs.com>
-# Source: https://gitea.zionetrix.net/bn8/check_syncrepl_extended
+# Reference Source (Without applied fix): https://gitea.zionetrix.net/bn8/check_syncrepl_extended
+#
+# Author: Shashank Reddy Sunkara <https://shashankreddysunkara.github.io/blog/contact.html>
+# Source (Applied fix): https://github.com/Shashankreddysunkara/check_syncrepl_extended/blob/main/check_syncrepl_extended
 #
 
 import argparse

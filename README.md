@@ -105,8 +105,11 @@ optional arguments:
                         Page size: if defined, paging control using LDAP v3
                         extended control will be enabled.
 
-Author: Benjamin Renard <brenard@easter-eggs.com>, Source:
-https://gitea.zionetrix.net/bn8/check_syncrepl_extended
+# Author: Benjamin Renard <brenard@easter-eggs.com>
+# Reference Source (Without applied fix): https://gitea.zionetrix.net/bn8/check_syncrepl_extended
+#
+# Author: Shashank Reddy Sunkara <https://shashankreddysunkara.github.io/blog/contact.html>
+# Source (Applied fix): https://github.com/Shashankreddysunkara/check_syncrepl_extended/blob/main/check_syncrepl_extended
 ```
 
 ## Copyright
