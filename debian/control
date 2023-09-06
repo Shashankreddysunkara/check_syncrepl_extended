@@ -1,0 +1,30 @@
+Source: check-syncrepl-extended
+Section: admin
+Priority: optional
+Maintainer: Debian Zionetrix - check-syncrepl-extended <debian+check-syncrepl-extended@zionetrix.net>
+Build-Depends: debhelper (>> 11.0.0)
+Standards-Version: 3.9.6
+
+Package: check-syncrepl-extended
+Architecture: all
+Depends: ${misc:Depends}, python3, python3-ldap
+Description: Check LDAP syncrepl replication state between two servers
+ This script check LDAP syncrepl replication state between two servers. One
+ server is consider as provider and the other as consumer.
+ This script can check replication state with two method :
+  - by the fisrt, entryCSN of all entries of LDAP directory will be compare
+    between two servers
+  - by the second, all values of all atributes of all entries will be compare
+    between two servers.
+ In all case, contextCSN of servers will be compare and entries not present in
+ consumer or in provider will be notice. You can decide to disable contextCSN
+ verification by using argument --no-check-contextCSN.
+ This script is also able to "touch" LDAP object on provider to force
+ synchronisation of this object. This mechanism consist to add '%%TOUCH%%'
+ value to an attribute of this object and remove it just after. The touched
+ attribute is specify by parameter --touch. Of course, couple of DN and
+ password provided, must have write right on this attribute.
+ If your prefer, you can use --replace-touch parameter to replace value of
+ touched attribute instead of adding the touched value. Use-ful in case of
+ single-value attribute.
+ To use this script as an Icinga (or Nagios) plugin, use -n argument
